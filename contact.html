@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Godot 2D - Contact & Comparison</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Engine</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Node Comparison & Developer Feedback</h1>
+
+      <section>
+        <h2>Godot 2D Physics Nodes Comparison</h2>
+        <table>
+          <caption>
+            Overview of common 2D physics nodes in Godot 4
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Node Type</th>
+              <th scope="col">Primary Base Class</th>
+              <th scope="col">Use Case</th>
+              <th scope="col">Movement Control</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">CharacterBody2D</th>
+              <td>PhysicsBody2D</td>
+              <td>Player characters and complex NPCs</td>
+              <td>Scripted (move_and_slide)</td>
+            </tr>
+            <tr>
+              <th scope="row">RigidBody2D</th>
+              <td>PhysicsBody2D</td>
+              <td>Objects driven strictly by physics simulations</td>
+              <td>Engine Physics forces</td>
+            </tr>
+            <tr>
+              <th scope="row">StaticBody2D</th>
+              <td>PhysicsBody2D</td>
+              <td>Environment obstacles, floors, and walls</td>
+              <td rowspan="2">Static / Animated</td>
+            </tr>
+            <tr>
+              <th scope="row">Area2D</th>
+              <td>CollisionObject2D</td>
+              <td>Detection zones, triggers, and hitboxes</td>
+            </tr>
+            <tr>
+              <th scope="row">TileMap</th>
+              <td>Node2D</td>
+              <td>Grid-based level design and layout</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">
+                Data reference: Official Godot Engine 4.x Documentation
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <h2>Join the Developer Survey</h2>
+        <form action="#" method="get">
+          <fieldset>
+            <legend>Developer Information & Feedback</legend>
+
+            <p>
+              <label for="dev-name">Developer Name:</label>
+              <input
+                type="text"
+                id="dev-name"
+                name="dev_name"
+                required
+                placeholder="Enter your full name"
+              />
+            </p>
+
+            <p>
+              <label for="dev-email">Email Address:</label>
+              <input
+                type="email"
+                id="dev-email"
+                name="dev_email"
+                required
+                placeholder="name@example.com"
+              />
+            </p>
+
+            <p>
+              <label for="exp-years">Years of Game Dev Experience:</label>
+              <input
+                type="number"
+                id="exp-years"
+                name="exp_years"
+                min="0"
+                max="50"
+                value="1"
+              />
+            </p>
+
+            <!-- Input 4: Date -->
+            <p>
+              <label for="project-date">Target Project Launch Date:</label>
+              <input type="date" id="project-date" name="project_date" />
+            </p>
+
+            <p>
+              <label>Primary Primary Engine Focus:</label><br />
+              <input
+                type="radio"
+                id="focus-2d"
+                name="engine_focus"
+                value="2d"
+                checked
+              />
+              <label for="focus-2d">2D Games</label>
+              <input
+                type="radio"
+                id="focus-3d"
+                name="engine_focus"
+                value="3d"
+              />
+              <label for="focus-3d">3D Games</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="yes"
+              />
+              <label for="newsletter"
+                >Subscribe to monthly GDScript updates</label
+              >
+            </p>
+
+            <p>
+              <label for="feedback">Project Description or Comments:</label
+              ><br />
+              <textarea
+                id="feedback"
+                name="feedback"
+                rows="4"
+                cols="40"
+                placeholder="Tell us about your 2D game project..."
+              ></textarea>
+            </p>
+
+            <button type="submit">Submit Feedback</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Game Dev Notes</p>
+    </footer>
+  </body>
+</html>
